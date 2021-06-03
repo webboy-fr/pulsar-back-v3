@@ -68,7 +68,7 @@ class UrlExistsTest extends FeatureTestCase
         $result->assertJSONExact([
             [
                 "id" => "1", 
-                "firstname" => "Pierre",
+                "firstname" => "Pierreg",
                 "lastname" => "Durand",
                 "instrument" => ""
             ]
