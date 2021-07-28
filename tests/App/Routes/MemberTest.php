@@ -13,10 +13,6 @@ class MemberTest extends FeatureTestCase {
     //1 Créer les membre
     public function testAddMember() {
 
-        /*$fabricator = new Fabricator(MemberModel::class, null, 'fr_FR');
-        $testUser   = $fabricator->create(5);
-        print_r($testUser);*/
-
         $result = $this->call('post', 'member', [
             'firstname' => 'Pierre',
             'lastname'  => 'Durand',
@@ -35,7 +31,7 @@ class MemberTest extends FeatureTestCase {
         $result->assertJSONExact([
             [
                 "id"         => "1",
-                "firstname"  => "Pierreg",
+                "firstname"  => "Pierre",
                 "lastname"   => "Durand",
                 "instrument" => "",
             ],
