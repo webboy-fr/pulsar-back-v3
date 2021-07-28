@@ -6,7 +6,7 @@ use CodeIgniter\Test\DatabaseTestTrait;
 use CodeIgniter\Test\FeatureTestCase;
 use CodeIgniter\Test\FeatureTestTrait;
 
-class AddMemberTest extends FeatureTestCase {
+class MemberTest extends FeatureTestCase {
 
     use DatabaseTestTrait, FeatureTestTrait;
 
