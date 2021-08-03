@@ -50,4 +50,21 @@ class MemberTest extends FeatureTestCase {
 
     }
 
+    public function testGetMemberById() {
+
+        $result = $this->call('get', 'member/1');
+
+        $response = $result->response();
+
+        $result->assertJSONExact([
+            [
+                "id"         => "1",
+                "firstname"  => "Pierre",
+                "lastname"   => "Durand",
+                "instrument" => "",
+            ],
+        ]);
+
+    }
+
 }
