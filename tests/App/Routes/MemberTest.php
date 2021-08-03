@@ -57,12 +57,10 @@ class MemberTest extends FeatureTestCase {
         $response = $result->response();
 
         $result->assertJSONExact([
-            [
-                "id"         => "1",
-                "firstname"  => "Pierre",
-                "lastname"   => "Durand",
-                "instrument" => "",
-            ],
+            "id"         => "1",
+            "firstname"  => "Pierre",
+            "lastname"   => "Durand",
+            "instrument" => "",
         ]);
 
     }
