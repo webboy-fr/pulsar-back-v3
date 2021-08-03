@@ -35,7 +35,7 @@ class MemberTest extends FeatureTestCase {
 
     public function testMemberCreated() {
 
-        $result = $this->call('get', '/member');
+        $result = $this->call('get', 'member');
 
         $response = $result->response();
 
