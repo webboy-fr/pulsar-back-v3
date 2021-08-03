@@ -1,10 +1,16 @@
 <?php
 
-namespace App\Routes;
+// namespace App\Routes;
 
-use CodeIgniter\Test\DatabaseTestTrait as DatabaseTestTrait;
-use CodeIgniter\Test\FeatureTestCase as FeatureTestCase;
-use CodeIgniter\Test\FeatureTestTrait as FeatureTestTrait;
+// use CodeIgniter\Test\DatabaseTestTrait as DatabaseTestTrait;
+// use CodeIgniter\Test\FeatureTestCase as FeatureTestCase;
+// use CodeIgniter\Test\FeatureTestTrait as FeatureTestTrait;
+
+namespace App;
+
+use CodeIgniter\Test\DatabaseTestTrait;
+use CodeIgniter\Test\FeatureTestCase;
+use CodeIgniter\Test\FeatureTestTrait;
 
 class MemberTest extends FeatureTestCase {
 
@@ -18,10 +24,10 @@ class MemberTest extends FeatureTestCase {
             'lastname'  => 'Durand',
         ]);
 
-        $result = $this->call('post', 'member', [
-            'firstname' => 'Jacques',
-            'lastname'  => 'Dupond',
-        ]);
+        /*$result = $this->call('post', 'member', [
+        'firstname' => 'Jacques',
+        'lastname'  => 'Dupond',
+        ]);*/
 
         $this->assertTrue($result->isOK());
 
