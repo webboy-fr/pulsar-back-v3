@@ -81,7 +81,8 @@ class Member extends BaseController {
      */
     public function update($id = null) {
         $memberModel = new MemberModel();
-        $member      = $memberModel->update($id, $this->request->getPost());
+        //$member     = $memberModel->update($id, $this->request->getPost());
+        $member = $memberModel->update($id, ['instrument' => 'guitare']);
 
         return $this->respondUpdated($member);
     }
