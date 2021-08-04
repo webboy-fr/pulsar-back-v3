@@ -67,7 +67,7 @@ $result = $this->call('post', 'member', [
 
     public function testMemberUpdate() {
 
-        $result = $this->call('patch', 'member/1', [
+        $result = $this->call('put', 'member/1', [
             'instrument' => 'guitare',
         ]);
 
