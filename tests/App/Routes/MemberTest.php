@@ -24,11 +24,6 @@ class MemberTest extends FeatureTestCase {
             'lastname'  => 'Durand',
         ]);
 
-        $result = $this->call('post', 'member', [
-            'firstname' => 'Jacques',
-            'lastname'  => 'Dupond',
-        ]);
-
         $this->assertTrue($result->isOK());
 
     }
