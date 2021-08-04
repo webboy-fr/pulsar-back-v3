@@ -23,11 +23,11 @@ class MemberTest extends FeatureTestCase {
             'firstname' => 'Pierre',
             'lastname'  => 'Durand',
         ]);
-/*
-$result = $this->call('post', 'member', [
-'firstname' => 'Jacques',
-'lastname'  => 'Dupond',
-]);*/
+
+        $result = $this->call('post', 'member', [
+            'firstname' => 'Jacques',
+            'lastname'  => 'Dupond',
+        ]);
 
         $this->assertTrue($result->isOK());
 
