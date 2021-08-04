@@ -80,7 +80,10 @@ class Member extends BaseController {
      * @return mixed
      */
     public function update($id = null) {
-        //
+        $memberModel = new MemberModel();
+        $member      = $memberModel->update($id, $this->request->getPost());
+
+        return $this->respondUpdated($member);
     }
 
     /**

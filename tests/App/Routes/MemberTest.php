@@ -23,11 +23,11 @@ class MemberTest extends FeatureTestCase {
             'firstname' => 'Pierre',
             'lastname'  => 'Durand',
         ]);
-
-        $result = $this->call('post', 'member', [
-            'firstname' => 'Jacques',
-            'lastname'  => 'Dupond',
-        ]);
+/*
+$result = $this->call('post', 'member', [
+'firstname' => 'Jacques',
+'lastname'  => 'Dupond',
+]);*/
 
         $this->assertTrue($result->isOK());
 
@@ -61,6 +61,31 @@ class MemberTest extends FeatureTestCase {
             "firstname"  => "Pierre",
             "lastname"   => "Durand",
             "instrument" => "",
+        ]);
+
+    }
+
+    public function testMemberUpdate() {
+
+        $result = $this->call('put', 'member/1', [
+            'instrument' => 'guitare',
+        ]);
+
+        $this->assertTrue($result->isOK());
+
+    }
+
+    public function testMemberUpdated() {
+
+        $result = $this->call('get', 'member/1');
+
+        $response = $result->response();
+
+        $result->assertJSONExact([
+            "id"         => "1",
+            "firstname"  => "Pierre",
+            "lastname"   => "Durand",
+            "instrument" => "guitare",
         ]);
 
     }
