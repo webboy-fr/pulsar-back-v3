@@ -85,7 +85,7 @@ $result = $this->call('post', 'member', [
             "id"         => "1",
             "firstname"  => "Pierre",
             "lastname"   => "Durand",
-            "instrument" => "guitare",
+            "instrument" => "yukulele",
         ]);
 
     }
